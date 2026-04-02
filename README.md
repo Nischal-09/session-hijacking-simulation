@@ -8,12 +8,15 @@ This repository is for educational and security research purposes only. **Do not
 ## Project Structure
 - `/extension`: The Chrome extension used for capturing cookies.
 - `/server`: The Flask server (`stealer.py`) that receives and logs the cookie data.
-- `setup_guide.md`: Original setup instructions.
 
 ## How to Set Up
 1. **Server**: 
-   - Navigate to the `/server` folder.
-   - Run `python stealer.py`.
+    - Navigate to the `/server` folder.
+    - **SSL/TLS Setup**: This project requires HTTPS. Generate your local certificates (ignored by Git) by running:
+      ```bash
+      openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+      ```
+    - Run `python stealer.py`.
 2. **Extension**: 
    - Open Chrome and go to `chrome://extensions`.
    - Enable "Developer mode" in the top right.
