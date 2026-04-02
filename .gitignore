@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Chrome Extension
+*.crx
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
